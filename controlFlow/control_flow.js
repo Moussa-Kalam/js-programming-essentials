@@ -55,3 +55,37 @@ let authenticationStatus = isAuthenticated
   : 'Not authenticated';
 
 console.log('Authentication Status:', authenticationStatus);
+
+/* Practice task */
+
+let person = 'Subscriber';
+
+let authorization1;
+
+if (person === 'Employee') {
+  authorization1 = 'You are eligible to Dietary Services';
+} else if (person === 'Enrolled Member') {
+  authorization1 =
+    'You are eligible for dietary Services & a 1:1 with the dietician';
+} else if (person === 'Subscriber') {
+  authorization1 =
+    'You are eligible to a partial access to Dietary Services only';
+} else if (person === 'Non-Subscriber') {
+  authorization1 = 'You need to subscribe first to avail this facility.';
+} else {
+  authorization1 = 'You need to subscribe first to avail this facility.';
+}
+
+console.log(authorization1);
+
+// Using ternary
+let authorization2 =
+  person === 'Employee'
+    ? 'You are eligible to Dietary Services'
+    : person === 'Enrolled Member'
+    ? 'You are eligible for dietary Services & a 1:1 with the dietician'
+    : person === 'Subscriber'
+    ? 'You are eligible to a partial access to Dietary Services only'
+    : 'You need to subscribe first to avail this facility.';
+
+console.log(authorization2);
