@@ -11,6 +11,9 @@ function displayCount() {
 }
 
 function checkCountValue() {
+    if (count === 0) {
+        alert("Your followers count has been reset.")
+    }
     if (count === 10) {
       alert("Your Instagram post gained 10 followers! Congratulations!");
     } else if (count === 20) {
@@ -18,3 +21,7 @@ function checkCountValue() {
     }
 }
 
+function resetCount() {
+    count = 0;
+    document.getElementById('countDisplay').innerHTML = count;
+}
